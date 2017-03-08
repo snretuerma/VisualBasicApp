@@ -1,5 +1,5 @@
 # VisualBasicApp
-
+A basic Visual Basic application that computes the permutation and combination
 ## Functons
 ### Permutation
 #### With repetition
