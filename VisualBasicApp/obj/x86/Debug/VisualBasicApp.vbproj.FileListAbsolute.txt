@@ -1,0 +1,9 @@
+C:\Users\Noir\documents\visual studio 2010\Projects\VisualBasicApp\VisualBasicApp\bin\Debug\VisualBasicApp.exe
+C:\Users\Noir\documents\visual studio 2010\Projects\VisualBasicApp\VisualBasicApp\bin\Debug\VisualBasicApp.pdb
+C:\Users\Noir\documents\visual studio 2010\Projects\VisualBasicApp\VisualBasicApp\bin\Debug\VisualBasicApp.xml
+C:\Users\Noir\documents\visual studio 2010\Projects\VisualBasicApp\VisualBasicApp\obj\x86\Debug\VisualBasicProject.Form1.resources
+C:\Users\Noir\documents\visual studio 2010\Projects\VisualBasicApp\VisualBasicApp\obj\x86\Debug\VisualBasicProject.Resources.resources
+C:\Users\Noir\documents\visual studio 2010\Projects\VisualBasicApp\VisualBasicApp\obj\x86\Debug\VisualBasicApp.vbproj.GenerateResource.Cache
+C:\Users\Noir\documents\visual studio 2010\Projects\VisualBasicApp\VisualBasicApp\obj\x86\Debug\VisualBasicApp.exe
+C:\Users\Noir\documents\visual studio 2010\Projects\VisualBasicApp\VisualBasicApp\obj\x86\Debug\VisualBasicApp.xml
+C:\Users\Noir\documents\visual studio 2010\Projects\VisualBasicApp\VisualBasicApp\obj\x86\Debug\VisualBasicApp.pdb
