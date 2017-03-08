@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class appWindow
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,8 +22,9 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.inputPanel = New System.Windows.Forms.Panel()
+        Me.tokenElementTextBox = New System.Windows.Forms.TextBox()
+        Me.sampleSizeTextBox = New System.Windows.Forms.TextBox()
         Me.inputTokenLabel = New System.Windows.Forms.Label()
         Me.inputSizeLabel = New System.Windows.Forms.Label()
         Me.inputPanelLabel = New System.Windows.Forms.Label()
@@ -40,15 +41,15 @@ Partial Class Form1
         Me.notAllowedRadio = New System.Windows.Forms.RadioButton()
         Me.allowedRadio = New System.Windows.Forms.RadioButton()
         Me.repetitionPanelLabel = New System.Windows.Forms.Label()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.sampleSizeTextBox = New System.Windows.Forms.TextBox()
-        Me.tokenElementTextBox = New System.Windows.Forms.TextBox()
+        Me.FileToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.inputPanel.SuspendLayout()
         Me.buttonPanel.SuspendLayout()
         Me.methodPanel.SuspendLayout()
         Me.repetitionPanel.SuspendLayout()
-        Me.ContextMenuStrip1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'inputPanel
@@ -61,7 +62,21 @@ Partial Class Form1
         Me.inputPanel.Location = New System.Drawing.Point(216, 40)
         Me.inputPanel.Name = "inputPanel"
         Me.inputPanel.Size = New System.Drawing.Size(382, 102)
-        Me.inputPanel.TabIndex = 2
+        Me.inputPanel.TabIndex = 6
+        '
+        'tokenElementTextBox
+        '
+        Me.tokenElementTextBox.Location = New System.Drawing.Point(107, 57)
+        Me.tokenElementTextBox.Name = "tokenElementTextBox"
+        Me.tokenElementTextBox.Size = New System.Drawing.Size(251, 20)
+        Me.tokenElementTextBox.TabIndex = 8
+        '
+        'sampleSizeTextBox
+        '
+        Me.sampleSizeTextBox.Location = New System.Drawing.Point(107, 33)
+        Me.sampleSizeTextBox.Name = "sampleSizeTextBox"
+        Me.sampleSizeTextBox.Size = New System.Drawing.Size(251, 20)
+        Me.sampleSizeTextBox.TabIndex = 7
         '
         'inputTokenLabel
         '
@@ -99,14 +114,14 @@ Partial Class Form1
         Me.buttonPanel.Location = New System.Drawing.Point(216, 148)
         Me.buttonPanel.Name = "buttonPanel"
         Me.buttonPanel.Size = New System.Drawing.Size(382, 101)
-        Me.buttonPanel.TabIndex = 3
+        Me.buttonPanel.TabIndex = 9
         '
         'resetButton
         '
         Me.resetButton.Location = New System.Drawing.Point(191, 36)
         Me.resetButton.Name = "resetButton"
         Me.resetButton.Size = New System.Drawing.Size(100, 30)
-        Me.resetButton.TabIndex = 3
+        Me.resetButton.TabIndex = 11
         Me.resetButton.Text = "Reset"
         Me.resetButton.UseVisualStyleBackColor = True
         '
@@ -115,7 +130,7 @@ Partial Class Form1
         Me.computeButton.Location = New System.Drawing.Point(51, 36)
         Me.computeButton.Name = "computeButton"
         Me.computeButton.Size = New System.Drawing.Size(107, 30)
-        Me.computeButton.TabIndex = 2
+        Me.computeButton.TabIndex = 10
         Me.computeButton.Text = "Compute"
         Me.computeButton.UseVisualStyleBackColor = True
         '
@@ -124,9 +139,9 @@ Partial Class Form1
         Me.answerLabel.AutoSize = True
         Me.answerLabel.Location = New System.Drawing.Point(48, 0)
         Me.answerLabel.Name = "answerLabel"
-        Me.answerLabel.Size = New System.Drawing.Size(34, 13)
+        Me.answerLabel.Size = New System.Drawing.Size(101, 13)
         Me.answerLabel.TabIndex = 1
-        Me.answerLabel.Text = "Solve"
+        Me.answerLabel.Text = "Answer Unavailable"
         '
         'answerPanelLabel
         '
@@ -145,7 +160,7 @@ Partial Class Form1
         Me.methodPanel.Location = New System.Drawing.Point(9, 40)
         Me.methodPanel.Name = "methodPanel"
         Me.methodPanel.Size = New System.Drawing.Size(201, 102)
-        Me.methodPanel.TabIndex = 4
+        Me.methodPanel.TabIndex = 0
         '
         'methodPanelLabel
         '
@@ -162,8 +177,7 @@ Partial Class Form1
         Me.combinationRadio.Location = New System.Drawing.Point(24, 56)
         Me.combinationRadio.Name = "combinationRadio"
         Me.combinationRadio.Size = New System.Drawing.Size(83, 17)
-        Me.combinationRadio.TabIndex = 1
-        Me.combinationRadio.TabStop = True
+        Me.combinationRadio.TabIndex = 2
         Me.combinationRadio.Text = "Combination"
         Me.combinationRadio.UseVisualStyleBackColor = True
         '
@@ -173,8 +187,7 @@ Partial Class Form1
         Me.permutationRadio.Location = New System.Drawing.Point(24, 33)
         Me.permutationRadio.Name = "permutationRadio"
         Me.permutationRadio.Size = New System.Drawing.Size(81, 17)
-        Me.permutationRadio.TabIndex = 0
-        Me.permutationRadio.TabStop = True
+        Me.permutationRadio.TabIndex = 1
         Me.permutationRadio.Text = "Permutation"
         Me.permutationRadio.UseVisualStyleBackColor = True
         '
@@ -186,7 +199,7 @@ Partial Class Form1
         Me.repetitionPanel.Location = New System.Drawing.Point(9, 148)
         Me.repetitionPanel.Name = "repetitionPanel"
         Me.repetitionPanel.Size = New System.Drawing.Size(201, 101)
-        Me.repetitionPanel.TabIndex = 5
+        Me.repetitionPanel.TabIndex = 3
         '
         'notAllowedRadio
         '
@@ -194,8 +207,7 @@ Partial Class Form1
         Me.notAllowedRadio.Location = New System.Drawing.Point(24, 49)
         Me.notAllowedRadio.Name = "notAllowedRadio"
         Me.notAllowedRadio.Size = New System.Drawing.Size(82, 17)
-        Me.notAllowedRadio.TabIndex = 2
-        Me.notAllowedRadio.TabStop = True
+        Me.notAllowedRadio.TabIndex = 5
         Me.notAllowedRadio.Text = "Not Allowed"
         Me.notAllowedRadio.UseVisualStyleBackColor = True
         '
@@ -205,8 +217,7 @@ Partial Class Form1
         Me.allowedRadio.Location = New System.Drawing.Point(24, 26)
         Me.allowedRadio.Name = "allowedRadio"
         Me.allowedRadio.Size = New System.Drawing.Size(62, 17)
-        Me.allowedRadio.TabIndex = 1
-        Me.allowedRadio.TabStop = True
+        Me.allowedRadio.TabIndex = 4
         Me.allowedRadio.Text = "Allowed"
         Me.allowedRadio.UseVisualStyleBackColor = True
         '
@@ -219,43 +230,49 @@ Partial Class Form1
         Me.repetitionPanelLabel.TabIndex = 0
         Me.repetitionPanelLabel.Text = "Repetition"
         '
-        'ContextMenuStrip1
+        'FileToolStripMenuItem1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(93, 26)
+        Me.FileToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem})
+        Me.FileToolStripMenuItem1.Name = "FileToolStripMenuItem1"
+        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem1.Text = "File"
         '
-        'FileToolStripMenuItem
+        'CloseToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
-        Me.FileToolStripMenuItem.Text = "File"
+        Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseToolStripMenuItem.Text = "Close"
         '
-        'sampleSizeTextBox
+        'HelpToolStripMenuItem
         '
-        Me.sampleSizeTextBox.Location = New System.Drawing.Point(107, 33)
-        Me.sampleSizeTextBox.Name = "sampleSizeTextBox"
-        Me.sampleSizeTextBox.Size = New System.Drawing.Size(251, 20)
-        Me.sampleSizeTextBox.TabIndex = 5
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'tokenElementTextBox
+        'MenuStrip1
         '
-        Me.tokenElementTextBox.Location = New System.Drawing.Point(107, 57)
-        Me.tokenElementTextBox.Name = "tokenElementTextBox"
-        Me.tokenElementTextBox.Size = New System.Drawing.Size(251, 20)
-        Me.tokenElementTextBox.TabIndex = 6
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem1, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(610, 24)
+        Me.MenuStrip1.TabIndex = 10
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'Form1
+        'appWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(610, 261)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.repetitionPanel)
         Me.Controls.Add(Me.methodPanel)
         Me.Controls.Add(Me.buttonPanel)
         Me.Controls.Add(Me.inputPanel)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
+        Me.Name = "appWindow"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Methods of Counting"
         Me.inputPanel.ResumeLayout(False)
         Me.inputPanel.PerformLayout()
         Me.buttonPanel.ResumeLayout(False)
@@ -264,8 +281,10 @@ Partial Class Form1
         Me.methodPanel.PerformLayout()
         Me.repetitionPanel.ResumeLayout(False)
         Me.repetitionPanel.PerformLayout()
-        Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents inputPanel As System.Windows.Forms.Panel
@@ -278,8 +297,6 @@ Partial Class Form1
     Friend WithEvents notAllowedRadio As System.Windows.Forms.RadioButton
     Friend WithEvents allowedRadio As System.Windows.Forms.RadioButton
     Friend WithEvents repetitionPanelLabel As System.Windows.Forms.Label
-    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents inputTokenLabel As System.Windows.Forms.Label
     Friend WithEvents inputSizeLabel As System.Windows.Forms.Label
     Friend WithEvents inputPanelLabel As System.Windows.Forms.Label
@@ -289,5 +306,9 @@ Partial Class Form1
     Friend WithEvents answerLabel As System.Windows.Forms.Label
     Friend WithEvents tokenElementTextBox As System.Windows.Forms.TextBox
     Friend WithEvents sampleSizeTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents FileToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
 
 End Class
